@@ -14,10 +14,10 @@ COPY src ./src
 RUN mvn clean package
 
 # Copia el JAR ejecutable a la imagen
-COPY target/mercantiltest-0.0.1-MERCANTIL.jar .
+COPY target/mercantiltest-0.0.1-MERCANTIL.jar /app/mercantiltest.jar
 
 # Expone el puerto 8080 para la aplicación Spring Boot (ajusta según sea necesario)
 EXPOSE 8080
 
 # Comando para ejecutar la aplicación al iniciar el contenedor
-CMD ["java", "-jar", "mercantiltest-0.0.1-MERCANTIL.jar"]
+CMD ["java", "-jar", "mercantiltest.jar"]
