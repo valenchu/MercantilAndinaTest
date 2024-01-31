@@ -188,24 +188,13 @@ class MercantiltestApplicationTests {
                 .andReturn();
         List<String> resultCompare = testCrearPedidoSolo(productos, 3D, 4D);
         // Simula una solicitud GET para listar pedidos por fecha
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/pedidos/traer_pedidos_fecha?fecha=2024-01-30"))
+        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/pedidos/traer_pedidos_fecha?fecha="+LocalDate.now()))
                 .andExpect(status().isOk())
                 .andReturn();
 
         // Ajusta el expected response según tu estructura de datos
         DetalleProductoPedidoResponseDto detalle1 = new DetalleProductoPedidoResponseDto("89efb206-2aa6-4e21-8a23-5765e3de1f31", "Jamón y morrones", 3.0, 550.0);
         DetalleProductoPedidoResponseDto detalle2 = new DetalleProductoPedidoResponseDto("e29ebd0c-39d2-4054-b0f4-ed2d0ea089a1", "Palmitos", 4.0, 600.0);
-
-        PedidoResponseDtoPadre expectedResponse = new PedidoResponseDtoPadre(
-                LocalDate.parse("2024-01-30"),
-                "Dorton Road 80",
-                "tsayb@opera.com",
-                "(0351) 48158101",
-                "21:00",
-                Arrays.asList(detalle1, detalle2),
-                2835.0,
-                true
-        );
 
         // Verifica si la respuesta coincide con el expected response
         String jsonResponse = result.getResponse().getContentAsString(StandardCharsets.UTF_8);

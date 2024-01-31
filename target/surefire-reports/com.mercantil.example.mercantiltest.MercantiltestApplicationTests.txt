@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.mercantil.example.mercantiltest.MercantiltestApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.637 s - in com.mercantil.example.mercantiltest.MercantiltestApplicationTests
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 3.698 s - in com.mercantil.example.mercantiltest.MercantiltestApplicationTests

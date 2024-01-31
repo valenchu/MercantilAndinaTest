@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("MercantilAndinaTest/pedidos")
+@RequestMapping("pedidos")
 public class PedidoController {
     @Autowired
     private ManangerPedidoImpl manangerPedido;
