@@ -8,8 +8,6 @@ import com.mercantil.example.mercantiltest.persistence.entity.ProductoEntity;
 import com.mercantil.example.mercantiltest.persistence.repository.PedidoDetalleRepository;
 import com.mercantil.example.mercantiltest.service.dto.CrearPedidoDto;
 import com.mercantil.example.mercantiltest.service.dto.DetalleCrearProductoPedidoDto;
-import com.mercantil.example.mercantiltest.service.dto.DetalleProductoPedidoResponseDto;
-import com.mercantil.example.mercantiltest.service.dto.PedidoResponseDtoPadre;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -191,10 +189,6 @@ class MercantiltestApplicationTests {
         MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/pedidos/traer_pedidos_fecha?fecha="+LocalDate.now()))
                 .andExpect(status().isOk())
                 .andReturn();
-
-        // Ajusta el expected response según tu estructura de datos
-        DetalleProductoPedidoResponseDto detalle1 = new DetalleProductoPedidoResponseDto("89efb206-2aa6-4e21-8a23-5765e3de1f31", "Jamón y morrones", 3.0, 550.0);
-        DetalleProductoPedidoResponseDto detalle2 = new DetalleProductoPedidoResponseDto("e29ebd0c-39d2-4054-b0f4-ed2d0ea089a1", "Palmitos", 4.0, 600.0);
 
         // Verifica si la respuesta coincide con el expected response
         String jsonResponse = result.getResponse().getContentAsString(StandardCharsets.UTF_8);
