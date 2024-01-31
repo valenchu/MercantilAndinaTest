@@ -15,6 +15,7 @@ com\mercantil\example\mercantiltest\exceptions\ErrorListPersonalizadoPedido.clas
 com\mercantil\example\mercantiltest\MercantiltestApplication.class
 com\mercantil\example\mercantiltest\persistence\repository\ProductoRepository.class
 com\mercantil\example\mercantiltest\persistence\entity\PedidoCabeceraEntity.class
+com\mercantil\example\mercantiltest\configuration\MyScheduler.class
 com\mercantil\example\mercantiltest\persistence\repository\PedidoDetalleRepository.class
 com\mercantil\example\mercantiltest\service\ProductoService.class
 com\mercantil\example\mercantiltest\service\PedidoDetalleServiceImpl.class
