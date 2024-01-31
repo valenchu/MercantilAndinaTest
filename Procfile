@@ -1,0 +1,1 @@
+web: java -Dserver.port=$PORT $JAVA_OPTS -jar target/mercantiltest-0.0.1-MERCANTIL.jar
