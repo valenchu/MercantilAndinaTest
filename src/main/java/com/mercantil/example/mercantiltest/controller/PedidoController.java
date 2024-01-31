@@ -8,12 +8,13 @@ import com.mercantil.example.mercantiltest.service.dto.PedidoResponseDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 
 @RestController
-@RequestMapping("pedidos")
+@RequestMapping("MercantilAndinaTest/pedidos")
 public class PedidoController {
     @Autowired
     private ManangerPedidoImpl manangerPedido;
@@ -37,4 +38,6 @@ public class PedidoController {
     public ResponseEntity<?> getPedidosFecha(@RequestParam("fecha") String fecha) {
         return new ResponseEntity<>(pedidoCabeceraService.getPedidoFecha(fecha), HttpStatus.OK);
     }
+
+
 }
